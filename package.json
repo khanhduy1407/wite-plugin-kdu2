@@ -1,0 +1,82 @@
+{
+  "name": "wite-plugin-kdu2",
+  "version": "1.9.2",
+  "description": "Wite plugin for Kdu2",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsc -w -p . --incremental --skipLibCheck",
+    "build": "rimraf dist && tsc -p . --skipLibCheck",
+    "prepublishOnly": "yarn build"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "wite",
+    "kdu2"
+  ],
+  "author": "NKDuy",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khanhduy1407/wite-plugin-kdu2"
+  },
+  "bugs": {
+    "url": "https://github.com/khanhduy1407/wite-plugin-kdu2/issues"
+  },
+  "homepage": "https://github.com/khanhduy1407/wite-plugin-kdu2/tree/master/#readme",
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write"
+    ],
+    "*.ts": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/parser": "^7.15.8",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-proposal-decorators": "^7.15.8",
+    "@babel/plugin-transform-typescript": "^7.15.8",
+    "@rollup/pluginutils": "^4.1.1",
+    "@kdujs/babel-helper-kdu-jsx-merge-props": "^1.1.3",
+    "@kdujs/babel-preset-jsx": "^1.1.3",
+    "@kdujs/component-compiler-utils": "^3.3.0",
+    "babel-preset-env": "^1.7.0",
+    "consolidate": "^0.16.0",
+    "debug": "^4.3.2",
+    "fs-extra": "^9.1.0",
+    "hash-sum": "^2.0.0",
+    "magic-string": "^0.25.7",
+    "prettier": "^2.4.1",
+    "querystring": "^0.2.1",
+    "rollup": "^2.58.0",
+    "slash": "^3.0.0",
+    "source-map": "^0.7.3",
+    "kdu-template-es2015-compiler": "^1.9.1"
+  },
+  "peerDependencies": {
+    "wite": "^2.5.0",
+    "kdu-template-compiler": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/consolidate": "^0.14.1",
+    "@types/debug": "^4.1.7",
+    "@types/fs-extra": "^9.0.13",
+    "@types/hash-sum": "^1.0.0",
+    "@types/node": "^16.10.3",
+    "@types/puppeteer": "^5.4.4",
+    "execa": "^4.1.0",
+    "kdu-template-compiler": "^2.6.14",
+    "lint-staged": "^10.5.4",
+    "puppeteer": "^10.4.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.3",
+    "wite": "^2.9.15",
+    "yorkie": "^2.0.0"
+  }
+}
